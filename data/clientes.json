@@ -1,0 +1,149 @@
+[
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "123456789",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "correo": "juan.perez@example.com",
+      "telefono": "3111234567",
+      "compras": [
+          {"producto_id": 1, "fecha_compra": "2023-12-01T14:30:00", "monto": 120000},
+          {"producto_id": 2, "fecha_compra": "2023-12-05T16:00:00", "monto": 90000}
+      ]
+  },
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "987654321",
+      "nombre": "María",
+      "apellido": "Gómez",
+      "correo": "maria.gomez@example.com",
+      "telefono": "3127654321",
+      "compras": [
+          {"producto_id": 3, "fecha_compra": "2023-12-03T11:00:00", "monto": 250000}
+      ]
+  },
+    {
+      "tipo_documento_id": 2,
+      "numero_documento": "TI123456",
+      "nombre": "Carlos",
+      "apellido": "Ramírez",
+      "correo": "carlos.ramirez@example.com",
+      "telefono": "3106547890",
+      "compras": []
+  },
+    {
+      "tipo_documento_id": 3,
+      "numero_documento": "NIT900123456",
+      "nombre": "Empresa",
+      "apellido": "SAS",
+      "correo": "contacto@empresa.com",
+      "telefono": "6012345678",
+      "compras": [
+          {"producto_id": 4, "fecha_compra": "2023-11-25T13:00:00", "monto": 500000}
+      ]
+  },
+    {
+      "tipo_documento_id": 4,
+      "numero_documento": "PAS20234567",
+      "nombre": "Ana",
+      "apellido": "López",
+      "correo": "ana.lopez@example.com",
+      "telefono": "3149876543",
+      "compras": [
+          {"producto_id": 5, "fecha_compra": "2023-12-10T10:00:00", "monto": 150000}
+      ]
+  },
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "1020304050",
+      "nombre": "Luis",
+      "apellido": "Martínez",
+      "correo": "luis.martinez@example.com",
+      "telefono": "3156781234",
+      "compras": []
+  },
+    {
+      "tipo_documento_id": 2,
+      "numero_documento": "TI654321",
+      "nombre": "Laura",
+      "apellido": "García",
+      "correo": "laura.garcia@example.com",
+      "telefono": "3181239876",
+      "compras": [
+          {"producto_id": 6, "fecha_compra": "2023-11-30T15:45:00", "monto": 80000}
+      ]
+  },
+    {
+      "tipo_documento_id": 4,
+      "numero_documento": "PAS34567890",
+      "nombre": "Pedro",
+      "apellido": "Sánchez",
+      "correo": "pedro.sanchez@example.com",
+      "telefono": "3174567890",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "1122334455",
+      "nombre": "Sofía",
+      "apellido": "Torres",
+      "correo": "sofia.torres@example.com",
+      "telefono": "3198765432",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 3,
+      "numero_documento": "NIT800987654",
+      "nombre": "Servicios",
+      "apellido": "LTDA",
+      "correo": "info@serviciosltda.com",
+      "telefono": "6045678901",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 2,
+      "numero_documento": "TI998877",
+      "nombre": "Jorge",
+      "apellido": "Hernández",
+      "correo": "jorge.hernandez@example.com",
+      "telefono": "3009876543",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "5544332211",
+      "nombre": "Mónica",
+      "apellido": "Rojas",
+      "correo": "monica.rojas@example.com",
+      "telefono": "3134567890",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 4,
+      "numero_documento": "PAS98765432",
+      "nombre": "Elena",
+      "apellido": "Moreno",
+      "correo": "elena.moreno@example.com",
+      "telefono": "3121234567",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 1,
+      "numero_documento": "6677889900",
+      "nombre": "Andrés",
+      "apellido": "Cárdenas",
+      "correo": "andres.cardenas@example.com",
+      "telefono": "3167890123",
+      "compras": []
+    },
+    {
+      "tipo_documento_id": 3,
+      "numero_documento": "NIT700654321",
+      "nombre": "Comercial",
+      "apellido": "Global",
+      "correo": "ventas@comercialglobal.com",
+      "telefono": "6071234567",
+      "compras": []
+    }
+  ]
+  

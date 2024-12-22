@@ -1,0 +1,66 @@
+{% extends "header.html" %}
+
+{% block title %}Gestión de Clientes{% endblock %}
+
+{% block content %}
+<h2>Clientes</h2>
+<a href="/admin/clientes/nuevo" class="btn btn-primary mb-3">Agregar Cliente</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Número de Documento</th>
+            <th>Tipo de Documento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.numero_documento }}</td>
+            <td>{{ cliente.tipo_documento.codigo }}</td>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.apellido }}</td>
+            <td>{{ cliente.correo }}</td>
+            <td>{{ cliente.telefono }}</td>
+            <td>
+                <a href="/admin/clientes/{{ cliente.numero_documento }}/editar" class="btn btn-warning btn-sm">Editar</a>
+                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" data-cliente-id="{{ cliente.numero_documento }}">Eliminar</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal de confirmación de eliminación -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar este cliente?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a id="confirmDeleteButton" href="#" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var confirmDeleteModal = document.getElementById('confirmDeleteModal');
+    confirmDeleteModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var clienteId = button.getAttribute('data-cliente-id');
+        var confirmDeleteButton = document.getElementById('confirmDeleteButton');
+        confirmDeleteButton.href = '/admin/clientes/' + clienteId + '/eliminar';
+    });
+</script>
+{% endblock %}

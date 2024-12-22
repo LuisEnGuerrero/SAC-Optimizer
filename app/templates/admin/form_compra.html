@@ -1,0 +1,37 @@
+{% extends "header.html" %}
+
+{% block title %}{{ action }} Compra{% endblock %}
+
+{% block content %}
+<h1>{{ action }} Compra</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="numero_documento_cliente" class="form-label">Número de Documento del Cliente</label>
+        <input type="text" id="numero_documento_cliente" name="numero_documento_cliente" class="form-control" required
+               value="{{ compra.numero_documento_cliente if compra else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="producto_id" class="form-label">Producto</label>
+        <select id="producto_id" name="producto_id" class="form-select">
+            <option value="">Seleccionar Producto</option>
+            {% for producto in productos %}
+            <option value="{{ producto.id }}" {% if compra and compra.producto_id == producto.id %}selected{% endif %}>
+                {{ producto.nombre }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="fecha_compra" class="form-label">Fecha de Compra</label>
+        <input type="datetime-local" id="fecha_compra" name="fecha_compra" class="form-control"
+               value="{{ compra.fecha_compra|datetime if compra else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="monto" class="form-label">Monto</label>
+        <input type="number" step="0.01" id="monto" name="monto" class="form-control" required
+               value="{{ compra.monto if compra else '' }}">
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/admin/compras" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

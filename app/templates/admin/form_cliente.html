@@ -1,0 +1,46 @@
+{% extends "header.html" %}
+
+{% block title %}{{ action }} Cliente{% endblock %}
+
+{% block content %}
+<h2>{{ action }} Cliente</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="tipo_documento_id" class="form-label">Tipo de Documento</label>
+        <select id="tipo_documento_id" name="tipo_documento_id" class="form-select" required>
+            {% for tipo in tipos_documentos %}
+            <option value="{{ tipo.id }}" {% if cliente and cliente.tipo_documento_id == tipo.id %}selected{% endif %}>
+                {{ tipo.descripcion }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="numero_documento" class="form-label">Número de Documento</label>
+        <input type="text" id="numero_documento" name="numero_documento" class="form-control" required
+               value="{{ cliente.numero_documento if cliente else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required
+               value="{{ cliente.nombre if cliente else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" id="apellido" name="apellido" class="form-control" required
+               value="{{ cliente.apellido if cliente else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" id="correo" name="correo" class="form-control" required
+               value="{{ cliente.correo if cliente else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" class="form-control" required
+               value="{{ cliente.telefono if cliente else '' }}">
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/admin/clientes" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

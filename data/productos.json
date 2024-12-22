@@ -1,0 +1,212 @@
+[
+    {
+      "nombre": "Camiseta Básica",
+      "precio": 50000,
+      "talla": "M",
+      "color": "Blanco",
+      "imagen_url": "https://img.freepik.com/free-photo/front-view-smiley-woman-pointing-herself_23-2148946299.jpg"
+    },
+    {
+      "nombre": "Jeans Clásicos",
+      "precio": 90000,
+      "talla": "32",
+      "color": "Azul",
+      "imagen_url": "https://img.freepik.com/free-photo/jeans_1203-8093.jpg"
+    },
+    {
+      "nombre": "Chaqueta de Cuero",
+      "precio": 250000,
+      "talla": "L",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/young-man-listening-music-earphones_23-2148381730.jpg"
+    },
+    {
+      "nombre": "Vestido Casual",
+      "precio": 120000,
+      "talla": "M",
+      "color": "Rojo",
+      "imagen_url": "https://img.freepik.com/free-photo/positive-passionate-woman-dress-with-hands-hair_23-2148054937.jpg"
+    },
+    {
+      "nombre": "Blusa Elegante",
+      "precio": 80000,
+      "talla": "S",
+      "color": "Beige",
+      "imagen_url": "https://img.freepik.com/free-photo/professional-business-woman-posing-suit-sunglasses-outdoors_23-2148603033.jpg"
+    },
+    {
+      "nombre": "Pantalón Formal",
+      "precio": 95000,
+      "talla": "34",
+      "color": "Gris",
+      "imagen_url": "https://img.freepik.com/free-photo/front-view-male-performer-suit-sneakers-dancing_23-2148417945.jpg"
+    },
+    {
+      "nombre": "Camisa de Vestir",
+      "precio": 85000,
+      "talla": "L",
+      "color": "Azul Claro",
+      "imagen_url": "https://img.freepik.com/free-photo/business-casual-shirt-white-closeup-outdoor-photoshoot_53876-119744.jpg"
+    },
+    {
+      "nombre": "Falda Plisada",
+      "precio": 70000,
+      "talla": "M",
+      "color": "Verde",
+      "imagen_url": "https://img.freepik.com/free-photo/black-suede-line-skirt-with-design-space-women-s-street-fashion_53876-102866.jpg"
+    },
+    {
+      "nombre": "Short Deportivo",
+      "precio": 45000,
+      "talla": "M",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/man-wearing-beige-shorts-close-up_53876-125260.jpg"
+    },
+    {
+      "nombre": "Sudadera Completa",
+      "precio": 150000,
+      "talla": "L",
+      "color": "Gris",
+      "imagen_url": "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-standing-against-grey-wall_23-2148169389.jpg"
+    },
+    {
+      "nombre": "Abrigo de Invierno",
+      "precio": 300000,
+      "talla": "XL",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/front-view-smiley-woman-beach-with-winter-jacket_23-2148801500.jpg"
+    },
+    {
+      "nombre": "Zapatos Deportivos",
+      "precio": 200000,
+      "talla": "42",
+      "color": "Blanco",
+      "imagen_url": "https://img.freepik.com/free-photo/pair-trainers_144627-3809.jpg"
+    },
+    {
+      "nombre": "Zapatos de Vestir",
+      "precio": 250000,
+      "talla": "40",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/brown-leather-slip-men-s-shoes-fashion_53876-101531.jpg"
+    },
+    {
+      "nombre": "Bolso de Mano",
+      "precio": 80000,
+      "talla": "Única",
+      "color": "Marrón",
+      "imagen_url": "https://img.freepik.com/free-photo/fashion-leather-handbag-case-handle_1203-6494.jpg"
+    },
+    {
+      "nombre": "Cinturón de Cuero",
+      "precio": 45000,
+      "talla": "Única",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/jeans-belt-shoes_23-2147635603.jpg"
+    },
+    {
+      "nombre": "Bufanda de Lana",
+      "precio": 35000,
+      "talla": "Única",
+      "color": "Gris",
+      "imagen_url": "https://img.freepik.com/free-photo/fashionable-girl-winter-knitted-clothes_158595-4117.jpg"
+    },
+    {
+      "nombre": "Sombrero de Paja",
+      "precio": 40000,
+      "talla": "Única",
+      "color": "Beige",
+      "imagen_url": "https://img.freepik.com/free-photo/vanilla-closeup-healthy-pastry-christmas_1172-334.jpg"
+    },
+    {
+      "nombre": "Gorra Deportiva",
+      "precio": 30000,
+      "talla": "Única",
+      "color": "Azul",
+      "imagen_url": "https://img.freepik.com/free-photo/beautiful-woman-street_144627-10961.jpg"
+    },
+    {
+      "nombre": "Reloj Digital",
+      "precio": 520000,
+      "talla": "Única",
+      "color": "Negro, Rosa, Oro",
+      "imagen_url": "https://img.freepik.com/free-photo/smartwatch-screen-digital-device_53876-96810.jpg"
+    },
+    {
+      "nombre": "Reloj Análogo Mesa",
+      "precio": 150000,
+      "talla": "Única",
+      "color": "Plata, Blanco, Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/close-up-white-alarm-clock-colored-backdrop_23-2147943905.jpg"
+    },
+    {
+      "nombre": "Guantes de Invierno",
+      "precio": 50000,
+      "talla": "M",
+      "color": "Negro, Marrón",
+      "imagen_url": "https://img.freepik.com/free-photo/fashionable-man-winter-knitted-clothes_158595-4107.jpg"
+    },
+    {
+      "nombre": "Chaleco de Lana",
+      "precio": 130000,
+      "talla": "L",
+      "color": "Azul, Amarillo, Verde",
+      "imagen_url": "https://img.freepik.com/free-photo/young-woman-nature_23-2148877476.jpg"
+    },
+    {
+      "nombre": "Pijama Completa",
+      "precio": 85000,
+      "talla": "M",
+      "color": "Rosa, Negro, Azul",
+      "imagen_url": "https://img.freepik.com/free-photo/front-view-woman-relaxing-home_23-2148597014.jpg"
+    },
+    {
+      "nombre": "Traje Formal",
+      "precio": 400000,
+      "talla": "L",
+      "color": "Negro",
+      "imagen_url": "https://img.freepik.com/free-photo/businessman-s-torso-suit_144627-3817.jpg"
+    },
+    {
+      "nombre": "Calcetines de Lana",
+      "precio": 20000,
+      "talla": "Única",
+      "color": "Blanco, Fucsia",
+      "imagen_url": "https://img.freepik.com/free-photo/fashionable-girl-knitted-socks_158595-4133.jpg"
+    },
+    {
+      "nombre": "Sandalias Planas",
+      "precio": 50000,
+      "talla": "39",
+      "color": "Amarillo, Beige, Azul",
+      "imagen_url": "https://img.freepik.com/free-photo/top-view-beach-slippers-with-sunglasses_23-2148608876.jpg"
+    },
+    {
+      "nombre": "Botas de Montaña",
+      "precio": 300000,
+      "talla": "43",
+      "color": "Marrón",
+      "imagen_url": "https://img.freepik.com/free-photo/travel-still-life-pack-top-view_23-2148837323.jpg"
+    },
+    {
+      "nombre": "Camisa Polo",
+      "precio": 75000,
+      "talla": "L",
+      "color": "Rojo",
+      "imagen_url": "https://img.freepik.com/free-photo/man-red-polo-shirt-apparel-studio-shoot_53876-102825.jpg"
+    },
+    {
+      "nombre": "Pantalón Deportivo",
+      "precio": 65000,
+      "talla": "M",
+      "color": "Gris",
+      "imagen_url": "https://img.freepik.com/free-photo/athletic-female-body-using-meter_23-2148343755.jpg"
+    },
+    {
+      "nombre": "Jersey de Lana",
+      "precio": 110000,
+      "talla": "M",
+      "color": "Verde Oscuro",
+      "imagen_url": "https://img.freepik.com/free-photo/flat-lay-autumn-cozy-accessories_23-2147869633.jpg"
+    }
+  ]

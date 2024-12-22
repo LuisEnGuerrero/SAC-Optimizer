@@ -1,0 +1,60 @@
+{% extends "header.html" %}
+
+{% block title %}Gestión de Tipos de Documento{% endblock %}
+
+{% block content %}
+<h2>Tipos de Documento</h2>
+<a href="/admin/tipo_documento/nuevo" class="btn btn-primary mb-3">Agregar Tipo de Documento</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tipo in tipos_documento %}
+        <tr>
+            <td>{{ tipo.id }}</td>
+            <td>{{ tipo.codigo }}</td>
+            <td>{{ tipo.descripcion }}</td>
+            <td>
+                <a href="/admin/tipo_documento/{{ tipo.id }}/editar" class="btn btn-warning btn-sm">Editar</a>
+                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal" data-tipo-id="{{ tipo.id }}">Eliminar</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal de confirmación de eliminación -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas eliminar este tipo de documento?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a id="confirmDeleteButton" href="#" class="btn btn-danger">Eliminar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var confirmDeleteModal = document.getElementById('confirmDeleteModal');
+    confirmDeleteModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var tipoId = button.getAttribute('data-tipo-id');
+        var confirmDeleteButton = document.getElementById('confirmDeleteButton');
+        confirmDeleteButton.href = '/admin/tipo_documento/' + tipoId + '/eliminar';
+    });
+</script>
+{% endblock %}

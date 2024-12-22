@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+
+{% block title %}{{ action }} Producto{% endblock %}
+
+{% block content %}
+<h2>{{ action }} Producto</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required
+               value="{{ producto.nombre if producto else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" step="0.01" id="precio" name="precio" class="form-control" required
+               value="{{ producto.precio if producto else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="talla" class="form-label">Talla</label>
+        <input type="text" id="talla" name="talla" class="form-control"
+               value="{{ producto.talla if producto else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input type="text" id="color" name="color" class="form-control"
+               value="{{ producto.color if producto else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="imagen_url" class="form-label">URL de la Imagen</label>
+        <input type="text" id="imagen_url" name="imagen_url" class="form-control"
+               value="{{ producto.imagen_url if producto else '' }}">
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/admin/productos" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

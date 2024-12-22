@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block title %}{{ action }} Tipo de Documento{% endblock %}
+
+{% block content %}
+<h1>{{ action }} Tipo de Documento</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="codigo" class="form-label">Código</label>
+        <input type="text" id="codigo" name="codigo" class="form-control" required
+               value="{{ tipo_documento.codigo if tipo_documento else '' }}">
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <input type="text" id="descripcion" name="descripcion" class="form-control" required
+               value="{{ tipo_documento.descripcion if tipo_documento else '' }}">
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/admin/tipo_documento" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

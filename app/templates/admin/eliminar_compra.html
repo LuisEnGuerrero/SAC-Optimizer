@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block title %}Eliminar Compra{% endblock %}
+
+{% block content %}
+<h1>Eliminar Compra</h1>
+<p>¿Estás seguro de que deseas eliminar la compra con ID "{{ compra.id }}"?</p>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="/admin/compras" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

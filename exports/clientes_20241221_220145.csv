@@ -1,0 +1,16 @@
+Número de Documento,Tipo de Documento,Nombre,Apellido,Correo,Teléfono,Total Compras,Fecha Última Compra
+123456789,CC,Juan,PÃ©rez,juan.perez@example.com,3111234567,210000.0,2023-12-05 16:00:00
+987654321,CC,MarÃ­a,GÃ³mez,maria.gomez@example.com,3127654321,250000.0,2023-12-03 11:00:00
+TI123456,TI,Carlos,RamÃ­rez,carlos.ramirez@example.com,3106547890,0,Sin compras
+NIT900123456,NIT,Empresa,SAS,contacto@empresa.com,6012345678,500000.0,2023-11-25 13:00:00
+PAS20234567,PAS,Ana,LÃ³pez,ana.lopez@example.com,3149876543,150000.0,2023-12-10 10:00:00
+1020304050,CC,Luis,MartÃ­nez,luis.martinez@example.com,3156781234,0,Sin compras
+TI654321,TI,Laura,GarcÃ­a,laura.garcia@example.com,3181239876,80000.0,2023-11-30 15:45:00
+PAS34567890,PAS,Pedro,SÃ¡nchez,pedro.sanchez@example.com,3174567890,0,Sin compras
+1122334455,CC,SofÃ­a,Torres,sofia.torres@example.com,3198765432,0,Sin compras
+NIT800987654,NIT,Servicios,LTDA,info@serviciosltda.com,6045678901,0,Sin compras
+TI998877,TI,Jorge,HernÃ¡ndez,jorge.hernandez@example.com,3009876543,0,Sin compras
+5544332211,CC,MÃ³nica,Rojas,monica.rojas@example.com,3134567890,0,Sin compras
+PAS98765432,PAS,Elena,Moreno,elena.moreno@example.com,3121234567,0,Sin compras
+6677889900,CC,AndrÃ©s,CÃ¡rdenas,andres.cardenas@example.com,3167890123,0,Sin compras
+NIT700654321,NIT,Comercial,Global,ventas@comercialglobal.com,6071234567,0,Sin compras

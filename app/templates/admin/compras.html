@@ -1,0 +1,35 @@
+{% extends "header.html" %}
+
+{% block title %}Gestión de Compras{% endblock %}
+
+{% block content %}
+<h2>Compras</h2>
+<a href="/admin/compras/nuevo" class="btn btn-primary mb-3">Agregar Compra</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Número de Documento del Cliente</th>
+            <th>Producto</th>
+            <th>Fecha de Compra</th>
+            <th>Monto</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for compra in compras %}
+        <tr>
+            <td>{{ compra.id }}</td>
+            <td>{{ compra.numero_documento_cliente }}</td>
+            <td>{{ compra.producto.nombre if compra.producto else 'N/A' }}</td>
+            <td>{{ compra.fecha_compra }}</td>
+            <td>{{ compra.monto }}</td>
+            <td>
+                <a href="/admin/compras/{{ compra.id }}/editar" class="btn btn-warning btn-sm">Editar</a>
+                <a href="/admin/compras/{{ compra.id }}/eliminar" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
