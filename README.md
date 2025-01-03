@@ -90,10 +90,8 @@ SAC-Optimizer/
 ├── data/
 │   ├── add_clientes.py  # Script para cargar clientes
 │   ├── add_productos.py  # Script para cargar productos
-├── tests/
-│   ├── __init__.py
-│   ├── test_api.py
-│   └── test_models.py
+│   ├── clientes.json  # Archivo JSON con datos de prueba de Clientes
+│   └── productos.json # Archivo JSON con datos de prueba de Productos
 ├── README.md
 ├── requirements.txt
 └── LICENSE
@@ -114,6 +112,58 @@ La estructura del proyecto SAC-Optimizer sigue una arquitectura modular basada e
 
 Esta arquitectura proporciona una estructura clara y organizada que facilita el desarrollo, mantenimiento y escalabilidad de la aplicación.
 
+---
+
+## Descripción de la Estructura y Técnica Empleada en el Diseño de la Base de Datos SQLite
+
+### Estructura de la Base de Datos
+
+La base de datos SQLite en este proyecto backend está diseñada utilizando SQLAlchemy, un ORM (Object-Relational Mapping) para Python. La estructura de la base de datos se compone de las siguientes tablas:
+
+1. **TipoDocumento**: Tabla de referencia que almacena los tipos de documentos de identificación.
+   - `id`: Identificador único.
+   - `codigo`: Código del tipo de documento (e.g., 'CC', 'TI').
+   - `descripcion`: Descripción del tipo de documento (e.g., 'Cédula de Ciudadanía').
+
+2. **Cliente**: Tabla que almacena la información básica de los clientes.
+   - `numero_documento`: Número de documento único del cliente.
+   - `tipo_documento_id`: Relación con la tabla `TipoDocumento`.
+   - `nombre`, `apellido`, `correo`, `telefono`: Información básica del cliente.
+   - Relaciones con las tablas `Compra` y `Historial`.
+
+3. **Producto**: Tabla que almacena la información de los productos.
+   - `id`: Identificador único del producto.
+   - `nombre`, `precio`, `talla`, `color`, `imagen_url`: Información del producto.
+   - Relación con la tabla `Compra`.
+
+4. **Compra**: Tabla que representa las compras realizadas por los clientes.
+   - `id`: Identificador único de la compra.
+   - `numero_documento_cliente`: Relación con la tabla `Cliente`.
+   - `producto_id`: Relación con la tabla `Producto`.
+   - `fecha_compra`, `monto`: Información de la compra.
+   - Relaciones con las tablas `Cliente` y `Producto`.
+
+5. **Historial**: Tabla que representa interacciones o eventos asociados con los clientes.
+   - `id`: Identificador único del historial.
+   - `numero_documento_cliente`: Relación con la tabla `Cliente`.
+   - `fecha_interaccion`, `tipo_interaccion`: Información del historial.
+   - Relación con la tabla `Cliente`.
+
+### Técnica Empleada
+
+La técnica empleada en el diseño de la base de datos se basa en los siguientes principios:
+
+1. **Normalización**: La base de datos está normalizada para evitar la redundancia de datos y asegurar la integridad referencial. Cada tabla tiene una responsabilidad específica y las relaciones entre tablas están claramente definidas.
+
+2. **Relaciones**: Se utilizan relaciones uno a muchos (1:N) para conectar las tablas. Por ejemplo, un `TipoDocumento` puede estar asociado con muchos `Cliente`, y un `Cliente` puede tener muchas `Compra` y `Historial`.
+
+3. **Integridad Referencial**: Las claves foráneas (`ForeignKey`) aseguran que las relaciones entre tablas sean consistentes. Por ejemplo, `tipo_documento_id` en la tabla `Cliente` debe existir en la tabla `TipoDocumento`.
+
+4. **ORM (Object-Relational Mapping)**: SQLAlchemy se utiliza para mapear las clases de Python a las tablas de la base de datos, lo que facilita la manipulación de datos mediante objetos en lugar de consultas SQL directas.
+
+5. **Cascading**: Se emplea la opción `cascade="all, delete-orphan"` en las relaciones para asegurar que las operaciones de eliminación se propaguen correctamente y no queden registros huérfanos.
+
+De esta forma, la base de datos SQLite está diseñada de manera modular y normalizada, utilizando SQLAlchemy para gestionar las relaciones y asegurar la integridad de los datos. Esto facilita la escalabilidad y mantenibilidad del sistema.
 ---
 
 ## Instalación y Configuración
