@@ -164,6 +164,7 @@ La técnica empleada en el diseño de la base de datos se basa en los siguientes
 5. **Cascading**: Se emplea la opción `cascade="all, delete-orphan"` en las relaciones para asegurar que las operaciones de eliminación se propaguen correctamente y no queden registros huérfanos.
 
 De esta forma, la base de datos SQLite está diseñada de manera modular y normalizada, utilizando SQLAlchemy para gestionar las relaciones y asegurar la integridad de los datos. Esto facilita la escalabilidad y mantenibilidad del sistema.
+
 ---
 
 ## Instalación y Configuración
