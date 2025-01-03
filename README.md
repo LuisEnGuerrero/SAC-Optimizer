@@ -18,6 +18,44 @@ La API permite:
 
 ---
 
+## Gestión Administrativa Mediante FastAPI y Flask:
+
+FastAPI genera automáticamente documentación interactiva para la API, lo que facilita la exploración y prueba de los endpoints disponibles.
+
+**Acceder a la Documentación Interactiva**:
+   - Una vez que el servidor esté en funcionamiento, en el navegador web:
+   - Navegar a `http://127.0.0.1:8000/docs` para acceder a la documentación generada con **Swagger UI**.
+
+**Explorar y Probar Endpoints**:
+   - En la interfaz de **Swagger UI**, se puede ver una lista de todos los endpoints disponibles en la API.
+   - Cada endpoint incluye información sobre los métodos HTTP soportados (GET, POST, PUT, DELETE), parámetros requeridos y posibles respuestas.
+
+**Consultar Esquemas de Datos**:
+   - La documentación también incluye detalles sobre los esquemas de datos utilizados en la API.
+   - Se puede ver la estructura de los modelos de datos, incluyendo los campos requeridos y sus tipos, lo que facilita la comprensión de cómo interactuar con la API.
+
+**Actualizar la Documentación**:
+   - Cada vez que se realicen cambios en la API (nuevos endpoints, cambios en los modelos de datos, etc.), la documentación se actualizará automáticamente.
+   - Solo basta con reiniciar el servidor para reflejar los cambios en la documentación.
+
+
+### Modulo de Gestión mediente Flask.
+
+
+**Acceder a la Página de Gestión**:
+   - Una vez que el servidor esté en funcionamiento, en el navegador web:
+   - Navegar a `http://127.0.0.1:8000/admin` para acceder a la documentación generada con **Flask**.
+
+**Formularios de Fácil Uso**:
+   - En la interfaz de **Flask**, se puede ver una lista de todos los CRUDs disponibles mediante plantillas.
+   - Cada CRUD incluye información sobre los métodos soportados (GET, POST, PUT, DELETE), como botones de acción en cada formulario para una gestión de datos eficiente y ágil.
+
+**Actualización de Datos**:
+   - Para cada CRUD se generaron las plantillas adecuadas en forma de Formulario con estilo Bootstrap.
+   - La gestión de los datos, tanto de Clientes, como de Productos, Compras o Ventas y el Historial, pueden ser actualizados y alimentados de forma manual, respetando la estructura de los datos de forma sencilla.
+   
+---
+
 ## Estructura del Proyecto
 
 ```
@@ -60,7 +98,23 @@ SAC-Optimizer/
 ├── requirements.txt
 └── LICENSE
 ```
+## Arquitectura de Software
 
+La estructura del proyecto SAC-Optimizer sigue una arquitectura modular basada en componentes. Se procedió a dividir la aplicación en módulos independientes que se encargan de diferentes responsabilidades que brindan grandes ventajas:
+
+1. **Mantenibilidad**: La separación de responsabilidades en diferentes módulos facilita la localización y corrección de errores, así como la implementación de nuevas funcionalidades sin afectar otras partes del sistema.
+
+2. **Escalabilidad**: La arquitectura modular permite escalar la aplicación de manera más sencilla, ya que se pueden añadir nuevos módulos o mejorar los existentes sin necesidad de reestructurar todo el proyecto.
+
+3. **Reusabilidad**: Los módulos pueden ser reutilizados en otros proyectos o en diferentes partes de la misma aplicación, lo que reduce el tiempo de desarrollo y mejora la consistencia del código.
+
+4. **Facilidad de pruebas**: La estructura modular facilita la creación de pruebas unitarias y de integración, ya que cada módulo puede ser probado de manera independiente.
+
+5. **Colaboración**: La división del proyecto en módulos independientes permite que diferentes equipos de desarrollo trabajen en paralelo en distintas partes de la aplicación, mejorando la eficiencia y reduciendo los tiempos de desarrollo.
+
+Esta arquitectura proporciona una estructura clara y organizada que facilita el desarrollo, mantenimiento y escalabilidad de la aplicación.
+
+---
 ---
 
 ## Instalación y Configuración
@@ -110,7 +164,7 @@ SAC-Optimizer/
 
 - **GET /clientes**: Obtener lista de clientes.
 - **POST /clientes**: Crear un cliente.
-- **GET /clientes/{id}**: Obtener un cliente por ID.
+- **GET /cliente/{TipoId}{#Id}**: Obtener un cliente por Tipo y Número de documento de Identificación.
 - **PUT /clientes/{id}**: Actualizar un cliente.
 - **DELETE /clientes/{id}**: Eliminar un cliente.
 
@@ -190,31 +244,31 @@ Este documento proporciona una guía paso a paso para desplegar la aplicación S
 
 ### Paso 1: Crear un nuevo servicio en Render
 
-1. Inicia sesión en tu cuenta de Render.
-2. Haz clic en `New` y selecciona `Web Service`.
-3. Conecta tu cuenta de GitHub y selecciona el repositorio `SAC-Optimizer`.
-4. Configura los siguientes parámetros:
+1. Iniciar sesión en la cuenta de Render.
+2. Dar clic en `New` y selecciona `Web Service`.
+3. Conectar la cuenta de GitHub y seleccionar el repositorio `SAC-Optimizer`.
+4. Configurar los siguientes parámetros:
    - **Name**: `sac-optimizer-backend`
    - **Environment**: `Python 3`
    - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port 8000`
-5. Haz clic en `Create Web Service`.
+5. Dar clic en `Create Web Service`.
 
 ### Paso 2: Configurar variables de entorno
 
-1. En la página del servicio en Render, ve a la sección `Environment` y agrega las siguientes variables de entorno:
-   - `DATABASE_URL`: La URL de la base de datos Turso que configuraremos en el siguiente paso.
+1. En la página del servicio en Render, en la sección `Environment`, agregar las siguientes variables de entorno:
+   - `DATABASE_URL`: La URL de la base de datos Turso que se configurará en el siguiente paso.
 
 ## 2. Despliegue de la Base de Datos en Turso
 
 ### Paso 1: Crear una nueva base de datos en Turso
 
-1. Inicia sesión en tu cuenta de Turso.
-2. Crea una nueva base de datos y anota la URL de conexión proporcionada por Turso.
+1. Iniciar sesión en la cuenta de Turso.
+2. Crear una nueva base de datos y anotar la URL de conexión proporcionada por Turso.
 
 ### Paso 2: Configurar la conexión a la base de datos
 
-1. En tu archivo `app/database/config.py`, asegúrate de que la URL de la base de datos se obtenga de la variable de entorno `DATABASE_URL`:
+1. En el archivo `app/database/config.py`, asignar la URL de la base de datos registrada en la variable de entorno `DATABASE_URL`:
 
    ```python
    import os
@@ -229,14 +283,14 @@ Este documento proporciona una guía paso a paso para desplegar la aplicación S
    Base = declarative_base()
    ```
 
-2. Asegúrate de que la variable de entorno `DATABASE_URL` en Render esté configurada con la URL de conexión de Turso.
+2. Verificar de que la variable de entorno `DATABASE_URL` en Render esté configurada con la URL de conexión de Turso.
 
 ## 3. Relacionar el Backend con la Base de Datos
 
 ### Paso 1: Verificar la conexión
 
-1. Asegúrate de que el backend pueda conectarse a la base de datos Turso utilizando la URL proporcionada.
-2. Puedes verificar esto ejecutando el backend localmente con la variable de entorno `DATABASE_URL` configurada:
+1. Validar de que el backend pueda conectarse a la base de datos Turso utilizando la URL proporcionada.
+2. Verificar esto ejecutando el backend localmente con la variable de entorno `DATABASE_URL` configurada:
 
    ```sh
    export DATABASE_URL="URL_DE_TURSO"
@@ -245,14 +299,14 @@ Este documento proporciona una guía paso a paso para desplegar la aplicación S
 
 ### Paso 2: Desplegar y probar
 
-1. Una vez que hayas configurado todo correctamente, Render debería desplegar tu aplicación automáticamente.
-2. Accede a la URL proporcionada por Render para tu servicio backend y verifica que la aplicación esté funcionando correctamente.
+1. Una vez configurado todo correctamente, Render debería desplegar la aplicación automáticamente.
+2. Acceder a la URL proporcionada por Render para el backend y verificar que la aplicación esté funcionando correctamente.
 
 ## 4. Notas adicionales
 
-- Asegúrate de que tu base de datos en Turso esté configurada para permitir conexiones desde la IP del servicio Render.
-- Puedes utilizar herramientas como Postman o cURL para probar los endpoints de tu API y verificar que todo esté funcionando correctamente.
+- Garantizar de que la base de datos en Turso esté configurada para permitir conexiones desde la IP del servicio Render.
+- Se Puede utilizar las herramientas de gestión de FastAPI o Flask, así como Postman o cURL para probar los endpoints de tu API y verificar que todo esté funcionando correctamente.
 
-¡Eso es todo! Ahora tu aplicación SAC-Optimizer debería estar desplegada y funcionando con Render para el backend y Turso para la base de datos.
+¡Eso es todo! Ahora la aplicación SAC-Optimizer debería estar desplegada y funcionando con Render para el backend y Turso para la base de datos.
 
 
