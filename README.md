@@ -24,7 +24,7 @@ FastAPI genera automáticamente documentación interactiva para la API, lo que f
 
 **Acceder a la Documentación Interactiva**:
    - Una vez que el servidor esté en funcionamiento, en el navegador web:
-   - Navegar a `http://127.0.0.1:8000/docs` para acceder a la documentación generada con **Swagger UI**.
+   - Navegar a [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) para acceder a la documentación generada con **Swagger UI**.
 
 **Explorar y Probar Endpoints**:
    - En la interfaz de **Swagger UI**, se puede ver una lista de todos los endpoints disponibles en la API.
@@ -44,7 +44,7 @@ FastAPI genera automáticamente documentación interactiva para la API, lo que f
 
 **Acceder a la Página de Gestión**:
    - Una vez que el servidor esté en funcionamiento, en el navegador web:
-   - Navegar a `http://127.0.0.1:8000/admin` para acceder a la documentación generada con **Flask**.
+   - Navegar a [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin) para acceder a la documentación generada con **Flask**.
 
 **Formularios de Fácil Uso**:
    - En la interfaz de **Flask**, se puede ver una lista de todos los CRUDs disponibles mediante plantillas.
@@ -114,7 +114,6 @@ La estructura del proyecto SAC-Optimizer sigue una arquitectura modular basada e
 
 Esta arquitectura proporciona una estructura clara y organizada que facilita el desarrollo, mantenimiento y escalabilidad de la aplicación.
 
----
 ---
 
 ## Instalación y Configuración
@@ -305,7 +304,7 @@ Este documento proporciona una guía paso a paso para desplegar la aplicación S
 ## 4. Notas adicionales
 
 - Garantizar de que la base de datos en Turso esté configurada para permitir conexiones desde la IP del servicio Render.
-- Se Puede utilizar las herramientas de gestión de FastAPI o Flask, así como Postman o cURL para probar los endpoints de tu API y verificar que todo esté funcionando correctamente.
+- Se Puede utilizar las herramientas de gestión de FastAPI o Flask, así como Postman o cURL para probar los endpoints de la API y verificar que todo esté funcionando correctamente.
 
 ¡Eso es todo! Ahora la aplicación SAC-Optimizer debería estar desplegada y funcionando con Render para el backend y Turso para la base de datos.
 
